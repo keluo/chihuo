@@ -8,7 +8,7 @@ var conn = mysql.createConnection({
 });
 conn.connect();
 
-var insertSQL = 'insert into user(userName,passWord) values("yuwen","123456")';
+var insertSQL = 'insert into user(userName,passWord) values("yuwen001","123456")';
 var selectSQL = 'select * from user limit 10';
 var deleteSQL = 'delete from user';
 var updateSQL = 'update user set userName="yuwen01"  where userName="yuwen"';
