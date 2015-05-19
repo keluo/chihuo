@@ -1,0 +1,19 @@
+{
+    "environment": {
+        "development": {
+            "port": 3306,
+            "host": "localhost",
+            "database": "chihuo-text",
+            "user": "root",
+            "password": "123456a"
+        },
+        "production": {
+            "port": 3306,
+            "host": "localhost",
+            "database": "chihuo-text",
+            "user": "root",
+            "password": "123456a"
+        }
+    }
+
+}

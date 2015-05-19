@@ -1,4 +1,4 @@
-var mysql = require('mysql');
+/*var mysql = require('mysql');
 var conn = mysql.createConnection({
     host: 'localhost',
     user: 'root',
@@ -7,13 +7,21 @@ var conn = mysql.createConnection({
     port: 3306
 });
 conn.connect();
-
-var insertSQL = 'insert into user(userName,passWord) values("yuwen001","123456")';
+*/
+process.env.NODE_ENV = "production";
+var conn = require('./db/conn');
+var userSql = require('./db/sql/user.json'); 
+/*var insertSQL = 'insert into user(userName,passWord) values(?,?)';
 var selectSQL = 'select * from user limit 10';
 var deleteSQL = 'delete from user';
-var updateSQL = 'update user set userName="yuwen01"  where userName="yuwen"';
-
-//delete
+var updateSQL = 'update user set userName="yuwen01"  where userName="yuwen"';*/
+conn(userSql["userInsert"],["yuwen002",""],function(err,res){
+    if(err){
+        console.log("ERROR ==> " + err);
+    }
+    console.log("SUCCESS ==>" + res); 
+});
+/*//delete
 conn.query(deleteSQL, function (err0, res0) {
     if (err0) console.log(err0);
     console.log("DELETE Return ==> " + res0);
@@ -51,4 +59,4 @@ conn.query(deleteSQL, function (err0, res0) {
         });
     });
 });
-//conn.end();
+//conn.end();*/

@@ -1,0 +1,3 @@
+{
+	"userInsert":"insert into user(userName,passWord) values(?,?)"
+}
